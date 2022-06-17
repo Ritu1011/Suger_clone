@@ -1,0 +1,44 @@
+.body-div{
+    text-align: center;
+    color: black;
+    padding-bottom: 30px;
+    width:100%;
+    border: 2px solid red;
+
+}
+
+.hot-deals{
+    text-align: center;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+
+
+}
+.hot-deal-image{
+    width: 90%;
+    margin: auto;
+}
+
+.this-that{
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+.this-that-image{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.explore{
+    text-align: center;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+
+
+}
+.explore-image{
+    width: 90%;
+    margin: auto;
+}

@@ -1,0 +1,183 @@
+.checkout{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 10px 20px 10px;
+}
+.left{
+    width: 49%;
+}
+.details{
+    display: flex;
+}
+.details p{
+     margin-left:10px ;
+}
+.product{
+    display: flex;
+    margin-top: 20px;
+}
+.prdimg1{
+    border-radius: 10px;
+    width: 60px;
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.right{
+    width: 49%;
+}
+.contact{
+    width: 100%;
+    padding:10px 10px 3px 10px;
+    height: 90%;
+    border-radius: 20px;
+    background-color: rgb(250, 249, 249);
+}
+.name{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.addnew{
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+.addnew button{
+    border: none;
+    border-radius: 5px;
+}
+.addressdetails{
+    width: 98%;
+    height: 180px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.pay{
+    width: 80%;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 5px 10px 5px;
+    border-radius: 10px;
+}
+body{
+    background-color:rgb(250, 249, 249) ;
+}
+
+*{
+    font-family: Quicksand;
+}
+.overlay{
+    background-color: rgba(49,49,49,0.8);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.main{
+    width: 55%;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 50px;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    
+}
+input{
+  border-style:hidden;
+  font-size: 13px;
+  height: 20px;
+  border: none;
+  width: 45%;
+ border-bottom: 1px solid #eaeaec;
+   line-height: 0px;
+   margin-right: 10px;
+}
+.title{
+    display: flex;
+    width: 100%;
+    font-family: Quicksand;
+    justify-content: space-evenly;
+}
+p{
+    line-height: 0px;
+    margin-top: 20px;
+}
+.heading{
+    font-family:  Quicksand;
+    line-height: 0px;
+}
+.name_no{
+    display: flex;
+    width: 90%;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+.name_no input{
+    width: 350px;
+    margin-left: 0px;
+    
+}
+.add{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.add input{
+    margin-top: 15px;
+}
+.addline{
+    width: 90%;
+     border: none;
+    border-bottom: 1px solid #eaeaec;
+}
+.butt1{
+    margin-left: 260px;
+    margin-top: 20px;
+    background: #fc2779;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+}
+.butt2{
+    margin-left: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+}
+.title button{
+    width: 50px;
+    height: 20px;
+    border: none;
+    margin-left: 450px;
+    border-radius: 3px;
+}
+.title div{
+    display: flex;
+}
+.closeform{
+    margin-left: 460px;
+    margin-top: 15px;
+}
+.Mobile{
+    width: 80%;
+}

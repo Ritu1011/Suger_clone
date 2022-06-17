@@ -1,0 +1,25 @@
+.nav-tag{
+    height: 50px;
+    display: flex; 
+    margin: auto;
+    text-shadow: aquamarine;
+    font-weight: bold;
+    box-shadow: #7587a1;
+  
+}
+
+.btn-tag{
+margin-right: 40px;
+margin-top: 15px;
+}
+.link-tag{
+    text-decoration: none;
+    color: #7587a1;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+   
+}
+
+
+

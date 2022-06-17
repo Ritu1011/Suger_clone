@@ -1,0 +1,98 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;  
+    height: 80px;
+   
+}
+
+.navbar-container >div{
+    margin-top: 15px;
+}
+
+.input-bar{
+    /* border: 1px solid red; */
+    padding: 8px;
+    width: 800px;
+    
+}
+input{
+    width: 75%;
+    height: 40px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border: none;
+   padding-left: 40px;
+   
+   
+}
+.btn{
+    background-color: black;
+    color: white;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 120px;
+    height: 40px;
+    font-size: small;
+    font-size: 15px;
+    
+   
+}
+
+.login-logo{
+ margin-top: 15px;
+    
+}
+.register{
+   
+    margin-top: 15px;
+   margin-left: 5px;
+    text-decoration: underline;
+    
+}
+
+.icons-div{
+    display: flex;
+  
+}
+.icons-modify{
+    margin-right: 5px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.login-div{
+    padding-top: 25px;
+    margin-top: auto;
+}
+.nav-tag{
+    /* border: 1px solid red; */
+   
+    height: 50px;
+    display: flex; 
+    margin: auto;
+    text-shadow: aquamarine;
+    font-weight: bold;
+    box-shadow: #7587a1;
+  
+}
+
+.btn-tag{
+margin-right: 40px;
+margin-top: 15px;
+}
+.link-tag{
+    text-decoration: none;
+    color: #7587a1;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+   
+}
+
+
+

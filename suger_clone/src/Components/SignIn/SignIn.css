@@ -1,0 +1,71 @@
+.linput{
+    width: 91%;
+    border: 1px solid transparent;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    padding: 4%;
+}
+
+
+.button{
+    background-color:black;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.submit{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+input{
+    outline: none;
+    border-radius: 5px;
+}
+.signin{
+    width: 100%;
+    padding: 12px 0px;
+    font-size: 15px;
+}
+
+#other_way::after{
+    display: block;
+    content: '';
+    border-top: 1px solid rgba(0,0,0,0.2);
+    flex: 1 1;
+    height: 0px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+#other_way::before{
+    display: block;
+    content: '';
+    border-top: 1px solid rgba(0,0,0,0.2);
+    flex: 1 1;
+    height: 0px;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+#other_way{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color:rgba(0,0,0,0.7);
+}
+#google{
+    margin: 5% auto;
+    width: 30px;
+}
+#oppo{
+    margin: 7% auto;
+    width: 12.25rem;
+    height: 2.6rem;
+    margin-bottom: 0.41667rem;
+    color:"black";
+   background-image: url("https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
