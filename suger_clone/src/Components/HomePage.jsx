@@ -4,11 +4,8 @@ import { Footer } from "./Footer/Footer"
 import { Navbar } from "./Navbar"
 import { Category} from "./Category"
 import { Box } from "@chakra-ui/react"
-import { useEffect } from "react"
-import { useState } from "react"
-import * as slide from "./Slider"
 
-import "./Homepage.css"
+import * as slide from "./Slider"
 const HomePage = () => {
  
 return (

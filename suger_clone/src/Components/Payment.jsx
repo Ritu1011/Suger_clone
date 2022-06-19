@@ -36,75 +36,37 @@ export const PaymentOption =()=>{
 
 
 return <div className="checkout"> 
-        {/* <div className="left">
-            <div className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg" alt="details" />
-                <p>Price Details</p>
-            </div>
-            <div className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" alt="cart" />
-                <p>Cart Sub Total:</p><p>₹{total}</p>
-            </div>
-            <div  className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg" alt="shipping" />
-                <p>Shipping Cost:</p><p>₹49</p>
-            </div>
-            <div  className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/Discount.svg" alt="discount" />
-                <p>Discount Applied:</p><p>₹0.00</p>
-            </div>
-            <div  className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" alt="amount" />
-                <p>Amount Payable:</p><p key={total}>₹{total+49}</p>
-            </div>
-            <div  className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/shopping_cart.svg" alt="amount" />
-                <p>Order Summary</p>
-            </div>
-            {data.map(d=>
-            <div className="product">
-                <img src= {d.imgSrc} alt="product" className="prdimg1"/>
-                <div>
-                 <p>{d.Name}</p>
-                 <p>₹{d.price}</p>
-
-                </div>
-            </div>
-            )}
-        </div> */}
+       
+   
         <div className="right">
             <div  className="details" style={{marginBottom:"10px"}} >
                 <img src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="payment" />
                 <p>Payment Method</p>
             </div>
-            <div className="payment" style={{marginBottom:"10px"}}>
-                  <div className="method"style={{marginBottom:"10px"}} onClick={()=>
+            <div className="payment" style={{marginBottom:"10px"}} >
+                  <div className="method"style={{marginBottom:"10px",height:"30px",fontSize:"15px"}} onClick={()=>
                     document.querySelector(".tag").src="https://in.sugarcosmetics.com/desc-images/CheckFilled.svg"
                 }>
-                    <img src="https://in.sugarcosmetics.com/paymentIcons/upi.svg" alt="upi" />
+                    <img src="https://in.sugarcosmetics.com/paymentIcons/upi.svg" alt="upi" style={{width:"20px",height:"20px"}} />
                     <p>Instant Pay Using Other UPIs(Gpay,PhonePe,BHIM etc.)</p>
-                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="click" className="tag"/>
+                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="click" style={{width:"20px",height:"20px"}}/>
                 </div>
-                <div className="method" style={{marginBottom:"10px"}}>
-                    <img src="https://in.sugarcosmetics.com/paymentIcons/wallets.svg" alt="mobilewallet" />
+                <div className="method" style={{marginBottom:"10px",height:"30px",fontSize:"15px"}}>
+                    <img src="https://in.sugarcosmetics.com/paymentIcons/wallets.svg" alt="mobilewallet" style={{width:"20px",height:"20px"}} />
                     <p>Mobile Wallets(PhonePe,Freerecharge etc.)</p>
-                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" className="tag"/>
+                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" style={{width:"20px",height:"20px"}}/>
                 </div>
-                <div className="method" style={{marginBottom:"10px"}}>
-                    <img src="https://in.sugarcosmetics.com/paymentIcons/creditDebit.svg" alt="upi" />
+                <div className="method" style={{marginBottom:"10px",height:"30px",fontSize:"15px"}}>
+                    <img src="https://in.sugarcosmetics.com/paymentIcons/creditDebit.svg" alt="upi" style={{width:"20px",height:"20px"}} />
                     <p>Credit Cards/Debit Cards(Visa,Master,Rupay etc.)</p>
-                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" className="tag"/>
+                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="click" style={{width:"20px",height:"20px"}}/>
                 </div>
-                <div className="method" >
-                    <img src="https://in.sugarcosmetics.com/paymentIcons/netBanking.svg" alt="upi" />
-                    <p>Netbanking(ICICI,HDFC,SBI etc.)</p>
-                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" className="tag"/>
+                <div className="method" style={{marginBottom:"10px",height:"30px",fontSize:"15px"}}>
+                    <img src="https://in.sugarcosmetics.com/paymentIcons/netBanking.svg" alt="upi" style={{width:"20px",height:"20px"}} />
+                    <p>Netbanking(ICICI,HDFC,SBI etc.)</p> 
+                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" className="tag" style={{width:"20px",height:"20px"}}/>
                 </div>
-                <div className="method">
-                    <img src="https://in.sugarcosmetics.com/paymentIcons/cod.svg" alt="upi" />
-                    <p>Cash on delivery</p>
-                    <img src="https://in.sugarcosmetics.com/desc-images/Check.svg" alt="c;ick" className="tag"/>
-                </div>
+                
 
                 <Link onClick={()=>{
                   alert("Order has been Placed sucessfully")
