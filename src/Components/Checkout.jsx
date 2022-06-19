@@ -102,7 +102,7 @@ console.log("adde",address)
               
                <div className="addnew">
                    <p>Delivery Address</p>
-                   <button onClick={toggleModal} style={{fontSize:"14px",marginTop:"30px"}}><HiPlusSm style={{fontSize:"14px"}} />Add New Address</button>
+                   <button onClick={toggleModal} style={{fontSize:"14px",marginTop:"30px",height:"35px",background:"gray"}}><HiPlusSm style={{fontSize:"14px"}} />Add New Address</button>
                </div>
                {modal && ( <div className="overlay" >
         <div className="main">
