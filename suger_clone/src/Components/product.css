@@ -1,0 +1,57 @@
+.imagekasize{
+    height: 250px;
+    width: 180px;
+    
+}
+
+.grid>div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+   
+  }
+  
+  .grid>h3{
+    align-items: center;
+    text-align: center;
+  }
+
+
+.Apsara{
+height: 430px;
+width: 250px;
+background-color: white;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.Apsara:hover{
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+}
+.Apsara>img{
+    margin-top: 15px;
+
+}
+.Apsara>button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    height: 25px;
+
+}
+
+.Apsara >p{
+margin-bottom: 0px;
+color: rgb(128, 128, 128);
+font-family: "Neutra_Display_Titling";
+font-size: 14px;
+}
+.Apsara>h4{
+    font-family: "Neutra_Display_Titling";
+    color: rgb(128, 128, 128);
+}
+
+.grid{
+    margin-left: 100px;
+}

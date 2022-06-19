@@ -2,31 +2,35 @@ import {useEffect,useState} from "react";
 import { Footer } from "./Footer/Footer";
 import { Navbar } from "./Navbar";
 import { Category} from "./Category";
- import './product.css'
-export const Makeup=()=>{
-    const [makeup,setMakeup]=useState([]);
+import './product.css'
+export const Trending=()=>{
+    const [trending,setTrending]=useState([]);
   
     useEffect(()=>{
         getData();
-         return function cleanup(){
-         }
-    },[]);
+        },[]);
 
     const getData=async()=>{
-        const data=await fetch("https://sugarcosmetic.herokuapp.com/makeups")
+        const data=await fetch("https://sugarcosmetic.herokuapp.com/trendings")
           .then((d)=>
             d.json()
            );
-           setMakeup(data.makeup);
-          }
+           setTrending(data.trending);
+    
+         
+    }
+
+    
+
 return(
     <>
-    
-        <Navbar/>
+     <Navbar/>
         <Category/>
-        <div className="grid" >
-            <div>
-              {makeup.map((t)=>(
+    <div className="grid" >
+        <div>
+       
+           
+              {trending.map((t)=>(
              <div className="Apsara">
                  <img className="imagekasize" src={t.imgSrc} alt="" />
                  <h4> {t.Name}</h4>
@@ -51,12 +55,8 @@ return(
             }}>ADD TO CART</button>
                 
              </div>
-          
          ))}
-        </div>
          </div>
-<Footer/>
-</>
-
-
-         )}
+         </div>
+         <Footer/>
+         </>)}

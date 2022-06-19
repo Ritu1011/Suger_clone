@@ -1,9 +1,29 @@
 import { Footer } from "./Footer/Footer"
 import { Navbar } from "./Navbar"
 import { Category} from "./Category"
+import { Box } from "@chakra-ui/react"
+import { useEffect } from "react"
+import { useState } from "react"
+
 import * as slide from "./Slider"
 import "./Homepage.css"
 const HomePage = () => {
+
+   const [makeup,setMakeup]=useState([]);
+  
+    useEffect(()=>{
+        getData();
+         return function cleanup(){
+         }
+    },[]);
+
+    const getData=async()=>{
+        const data=await fetch("https://sugarcosmetic.herokuapp.com/makeups")
+          .then((d)=>
+            d.json()
+           );
+           setMakeup(data.makeup);
+          }
   return (
     <>
       <Navbar/>
@@ -13,13 +33,47 @@ const HomePage = () => {
      <div >
       <h1 className="h1-tag-div">REFER YOUR FRIENDS</h1>
       </div>
-     <img src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/f53f2d67-ea43-4959-abca-eba6d87fd598.jpg" alt="sugar.png" style={{width:"100%"}}/>
+     <img src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/f53f2d67-ea43-4959-abca-eba6d87fd598.jpg"  alt="sugar.png" style={{width:"100%"}}/>
      <div >
       <h1 className="h1-tag-div" >METTLE PRIMING BALM</h1>
       </div>
     
-     <iframe width="1230" height="452" src="https://www.youtube.com/embed/_TTJmiTiiOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-     <div >
+     <iframe width="1230" height="452" src="https://www.youtube.com/embed/_TTJmiTiiOQ" title="YouTube video player"  alt="sugar.png" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+      <Box style={{width:"100%",height:"1800px"}}>
+      <div className="grid" >
+            <div>
+              {makeup.map((t)=>(
+             <div className="Apsara">
+                 <img className="imagekasize" src={t.imgSrc} alt="" />
+                 <h4> {t.Name}</h4>
+                 <p>Rs{t.price}</p>
+                 <p>{t.ratingNum}<span>
+               
+                 ({t.amount})</span></p>
+                 <br/>
+                 <button  onClick={()=>{
+                  console.log("clicked")
+                  alert("Product added to cart")
+                 
+                const data=t;
+               fetch("https://sugarcosmetic.herokuapp.com/carts",{
+                   method:"POST",
+                 headers:{
+                     "content-type":"application/json"
+                 },
+                 body:JSON.stringify(data)
+               })
+
+            }}>ADD TO CART</button>
+                
+             </div>
+          
+         ))}
+        </div>
+         </div>
+      </Box>
+      <div >
       <h1 className="h1-tag-div">QUICK BEAUTY TIPS WITH SUGAR</h1>
       </div>
      <slide.Slider2/>
@@ -27,9 +81,9 @@ const HomePage = () => {
       <h1 className="h1-tag-div" >HOT DEALS</h1>
       </div>
      <div className="hot-deals">
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/b6b3cb0a-2e6f-4fe9-99cc-ae327336040a.jpg"/>
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/5273604b-7d68-4815-823e-7c9d9cc5f6e4.jpg"/>
-        <img className="hot-deal-image" src="https://d32baadbbpueqt.cloudfront.net/37f0de63-c052-447c-9f98-dacceede39e1.jpg"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/b6b3cb0a-2e6f-4fe9-99cc-ae327336040a.jpg"  alt="sugar.png"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/5273604b-7d68-4815-823e-7c9d9cc5f6e4.jpg"  alt="sugar.png"/>
+        <img className="hot-deal-image" src="https://d32baadbbpueqt.cloudfront.net/37f0de63-c052-447c-9f98-dacceede39e1.jpg"  alt="sugar.png"/>
      </div>
      <div >
       <h1 className="h1-tag-div" >ULTIMATE MAKEUP QUIZ</h1>
@@ -41,16 +95,17 @@ const HomePage = () => {
       </div>
 
      <div className="hot-deals">
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/dd4d4e8a-b7e3-485e-8a8c-059f5ccab057.jpg"/>
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/18ec06e5-4071-4a84-ba25-3e46632b6de0.jpg"/>
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/ce6539a6-6bff-4f41-8554-4af80d8ffd07.jpg"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/dd4d4e8a-b7e3-485e-8a8c-059f5ccab057.jpg"  alt="sugar.png"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/18ec06e5-4071-4a84-ba25-3e46632b6de0.jpg" alt="sugar.png" />
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/ce6539a6-6bff-4f41-8554-4af80d8ffd07.jpg"  alt="sugar.png" />
      </div>
+   
 
      <div ><h1 className="h1-tag-div" >THIS OR THAT</h1></div>
 
      <div className="this-that">
-        <img className="this-that-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/2dfd09b7-d15c-4d7d-a2e3-fc2c2a7cbc0d.jpg"/>
-        <img className="this-that-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/1edc12f3-1ea2-46c3-a54e-57890e6a3bf9.png"/>
+        <img className="this-that-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/2dfd09b7-d15c-4d7d-a2e3-fc2c2a7cbc0d.jpg"  alt="sugar.png"/>
+        <img className="this-that-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/1edc12f3-1ea2-46c3-a54e-57890e6a3bf9.png"  alt="sugar.png"/>
         
      </div>
 
@@ -60,9 +115,9 @@ const HomePage = () => {
 
      
      <div className="hot-deals">
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/3d719924-5511-4ebb-b31f-dc3fabbe4cb1.jpg"/>
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/4570aaa9-52a7-4082-8d59-d2c1d298cdc8.jpg"/>
-        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/6095fb33-4d09-4a55-8ceb-395a0818420c.jpg"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/3d719924-5511-4ebb-b31f-dc3fabbe4cb1.jpg"  alt="sugar.png"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/4570aaa9-52a7-4082-8d59-d2c1d298cdc8.jpg"  alt="sugar.png"/>
+        <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/6095fb33-4d09-4a55-8ceb-395a0818420c.jpg"  alt="sugar.png"/>
      </div>
      
 

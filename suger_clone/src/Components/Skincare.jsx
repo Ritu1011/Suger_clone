@@ -2,31 +2,29 @@ import {useEffect,useState} from "react";
 import { Footer } from "./Footer/Footer";
 import { Navbar } from "./Navbar";
 import { Category} from "./Category";
- import './product.css'
-export const Makeup=()=>{
-    const [makeup,setMakeup]=useState([]);
+import './product.css'
+export const Skincare=()=>{
+    const [skincare,setSkincare]=useState([]);
   
     useEffect(()=>{
         getData();
-         return function cleanup(){
-         }
-    },[]);
+         },[]);
 
     const getData=async()=>{
-        const data=await fetch("https://sugarcosmetic.herokuapp.com/makeups")
+        const data=await fetch("https://sugarcosmetic.herokuapp.com/skincares")
           .then((d)=>
             d.json()
            );
-           setMakeup(data.makeup);
-          }
+           setSkincare(data.skincare);
+}
 return(
     <>
-    
-        <Navbar/>
-        <Category/>
-        <div className="grid" >
-            <div>
-              {makeup.map((t)=>(
+    <Navbar/>
+    <Category/>
+    <div className="grid" >
+        <div>
+           
+              {skincare.map((t)=>(
              <div className="Apsara">
                  <img className="imagekasize" src={t.imgSrc} alt="" />
                  <h4> {t.Name}</h4>
@@ -35,7 +33,7 @@ return(
                
                  ({t.amount})</span></p>
                  <br/>
-                 <button  onClick={()=>{
+                 <button onClick={()=>{
                   console.log("clicked")
                   alert("Product added to cart")
                  
@@ -45,18 +43,13 @@ return(
                  headers:{
                      "content-type":"application/json"
                  },
-                 body:JSON.stringify(data)
+                 body:JSON.stringify(data.skincare)
                })
 
             }}>ADD TO CART</button>
-                
              </div>
-          
          ))}
-        </div>
          </div>
-<Footer/>
-</>
-
-
-         )}
+         </div>
+         <Footer/>
+         </>)}

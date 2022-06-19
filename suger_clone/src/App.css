@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-/***    General     ***/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,8 +31,6 @@ body {
   cursor: pointer;
   text-transform: capitalize
 }
-
-/***    Landing Page     ***/
 .main-title,
 .main-para {
   color: #f1f1f1
@@ -74,7 +72,7 @@ opacity: 1;
 right: 0;
 }
 
-/***    Login Page     ***/
+
 h2 {
   font-weight: 300
 }
@@ -128,7 +126,6 @@ footer p {
   font-size: .9rem
 }
 
-/***    Register Page     ***/
 #checkbox {
   width: 1rem
 }
@@ -141,7 +138,7 @@ form span {
   float: left
 }
 
-/***    Home Page     ***/
+
 .home-page-title {
   color: #222
 }

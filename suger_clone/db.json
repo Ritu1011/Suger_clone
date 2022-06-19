@@ -281,6 +281,19 @@
       }
     ],
     "cart": [
-     
+      {
+        "imgSrc": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mettle-matte-lipstick-01-athena-red-terracotta-13200497737811.jpg?v=1619110264",
+        "Name": "Mettle Matte Lipstick",
+        "ratingNum": 4.4,
+        "price": 549,
+        "amount": "192"
+      },
+      {
+        "imgSrc": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-magic-wand-waterproof-concealer-07-vanilla-latte-fair-golden-undertone-13278398611539.jpg?v=1619114712",
+        "Name": "Magic Wand Waterproof Concealer",
+        "ratingNum": 4.8,
+        "price": 799,
+        "amount": "192"
+      }
     ]
   }
