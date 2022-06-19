@@ -1,5 +1,5 @@
 import "./Navbar.css" 
-import { FaPercentage } from "react-icons/fa";
+import { MdLocalOffer } from "react-icons/md";
 import { AiTwotoneHeart,AiTwotoneShopping } from "react-icons/ai";
 import {Link} from "react-router-dom"
 
@@ -28,8 +28,8 @@ return (
               alert("you liked this")
             }} className="icons-modify"><AiTwotoneHeart/></span>
              <Link   to="/cart" className="icons-modify nav-link"><AiTwotoneShopping/></Link>
-             <Link  to="/cart" className="icons-modify nav-link"><FaPercentage/></Link>
- </div>
+           <Link  to="/cart" className="icons-modify nav-link"><MdLocalOffer/></Link>
+             </div>
     </div>
    
     </>
