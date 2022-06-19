@@ -7,15 +7,12 @@ import { Footer } from "./Footer/Footer";
 import {Link} from "react-router-dom"
 import {MdDelete } from "react-icons/md";
 
-
-
 export const Cart =()=>{
 const [data,setData] = useState([]);
 
 useEffect(()=>{
 getData();
-return function cleanup(){
-}},[]);
+},[]);
 
     const getData=async()=>{
         const data=await fetch("https://sugarcosmetic.herokuapp.com/carts")
@@ -23,11 +20,10 @@ return function cleanup(){
             d.json()
            );
            setData(data.cart);}
+         const total = data.map(pro => pro.price).reduce((prev, curr) => prev + curr, 0); 
 
-      const total = data.map(pro => pro.price).reduce((prev, curr) => prev + curr, 0); 
-
-     return(
-        <>
+          return(
+         <>
         <Navbar/>
         <Category/>
         <div className="cart"> 

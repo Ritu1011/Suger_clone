@@ -22,6 +22,11 @@ return(
     <>
           <Navbar/>
         <Category/>
+        <div>
+          <img src="https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg" alt="" style={{height:"300px",width:"100%"}} />
+
+        </div>
+        <p style={{color:"gray",fontSize:"20px",marginLeft:"100px"}}>Total Item 16</p>
         <div className="grid" >
         < AiOutlineHeart/>
             <div style={{}}>

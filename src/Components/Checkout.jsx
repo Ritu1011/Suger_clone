@@ -4,13 +4,13 @@ import {Link} from "react-router-dom"
 import {ImCross}from 'react-icons/im';
 import {HiPlusSm} from 'react-icons/hi';
 
-export const Checkout =()=>{
-    const [modal, setModal] = useState(false);
+    export const Checkout =()=>{
+    const [status, setstatus] = useState(false);
     const [data,setData] = useState([]);
     const toggleModal = () => {
-      setModal(!modal);
+        setstatus(!status);
     };
-   if(modal) {
+   if(status) {
       document.body.classList.add('active-modal')
     } else {
       document.body.classList.remove('active-modal')
@@ -82,7 +82,7 @@ export const Checkout =()=>{
                    <p>Delivery Address</p>
                    <button onClick={toggleModal} style={{fontSize:"14px"}}><HiPlusSm style={{fontSize:"14px"}} />Add New Address</button>
                </div>
-               {modal && ( <div className="overlay" >
+               {status && ( <div className="overlay" >
         <div className="main">
         <div className="title">
             <div>

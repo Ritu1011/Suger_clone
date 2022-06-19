@@ -16,8 +16,6 @@ export const Trending=()=>{
             d.json()
            );
            setTrending(data.trending);
-    
-         
     }
 
     

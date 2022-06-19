@@ -8,7 +8,11 @@
   const A = styled.a`
    text-decoration: none;
    font-size: 15px;`;
-const navdata=[{ title:"MAKEUP",to:"/makeup" }, { title:"BRUSHES",to:"/brush" },{ title:"SKINCARE",to:"/skincare" },{ title:"TRENDING",to:"/trending" },{ title:"BLOG",to:"/blog" },{ title:"OFFERS",to:"/offers" },
+const navdata=[{ title:"MAKEUP",to:"/makeup" }, 
+{ title:"BRUSHES",to:"/brush" },
+{ title:"SKINCARE",to:"/skincare" },
+{ title:"TRENDING",to:"/trending" },{ title:"BLOG",to:"/blog" },
+{ title:"OFFERS",to:"/offers" },
      { title:"STORES",to:"/stores" }
    ]
   return (
@@ -19,13 +23,7 @@ const navdata=[{ title:"MAKEUP",to:"/makeup" }, { title:"BRUSHES",to:"/brush" },
        
          )
        })} 
-
-
-
-
-
-      
-    </div>
+</div>
   )
  }
 
