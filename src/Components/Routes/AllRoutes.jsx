@@ -9,6 +9,7 @@ import HomePage from '../HomePage'
 import { Checkout } from '../Checkout'
 import { PaymentOption } from '../Payment'
 import{ SignInPage }from "../SignIn/LoginPage"
+import Offers from "../offers"
 
 function AllRoutes() {
     return (
@@ -24,6 +25,7 @@ function AllRoutes() {
         <Route path='/Register' element={<RegisterPage/>}> </Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
         <Route path='/payment' element={<PaymentOption/>}></Route>
+        <Route path='/offers' element={<Offers/>}></Route>
       </Routes> 
     </div>
   )
