@@ -1,16 +1,29 @@
+
+
 import "./Checkout.css"
 import { useEffect, useState } from "react"
 import {Link} from "react-router-dom"
 import {ImCross}from 'react-icons/im';
 import {HiPlusSm} from 'react-icons/hi';
-
-    export const Checkout =()=>{
-    const [status, setstatus] = useState(false);
+import { useNavigate } from "react-router-dom";
+export const Checkout =()=>{
+    const navigate = useNavigate()
+    const [modal, setModal] = useState(false);
     const [data,setData] = useState([]);
+    const [address,setaddress]=useState({
+        fullname:"",
+        mobile:"",
+        line:"",
+        country:"",
+        city:"",
+        state:"",
+        pincode:"",
+
+    })
     const toggleModal = () => {
-        setstatus(!status);
+      setModal(!modal);
     };
-   if(status) {
+   if(modal) {
       document.body.classList.add('active-modal')
     } else {
       document.body.classList.remove('active-modal')
@@ -28,8 +41,17 @@ import {HiPlusSm} from 'react-icons/hi';
      
     }
    const total = data.map(d => d.price).reduce((prev, curr) => prev + curr, 0); 
-
-
+   const handledata=(e)=>{
+    setaddress({
+        ...address,
+        [e.target.id]:e.target.value
+    })
+   }
+   const handleaddress=(e)=>{
+    e.preventDefault()
+    toggleModal()
+   }
+console.log("adde",address)
     return <div className="checkout"> 
         <div className="left">
             <div className="details">
@@ -74,15 +96,15 @@ import {HiPlusSm} from 'react-icons/hi';
             </div>
             <div className="contact">
                <div className="name" >
-                   <p >Full Name:</p>
-                   <p>Phone Number:</p>
+                   <p >Full Name:{address.fullname}</p>
+                   <p>Phone Number:{address.mobile}</p>
                </div>
-               <p>Email:</p>
+              
                <div className="addnew">
                    <p>Delivery Address</p>
-                   <button onClick={toggleModal} style={{fontSize:"14px"}}><HiPlusSm style={{fontSize:"14px"}} />Add New Address</button>
+                   <button onClick={toggleModal} style={{fontSize:"14px",marginTop:"30px"}}><HiPlusSm style={{fontSize:"14px"}} />Add New Address</button>
                </div>
-               {status && ( <div className="overlay" >
+               {modal && ( <div className="overlay" >
         <div className="main">
         <div className="title">
             <div>
@@ -93,36 +115,43 @@ import {HiPlusSm} from 'react-icons/hi';
                 <button onClick={toggleModal} ><ImCross/></button>
             </div>
            </div>
-        <div className="name_no">
+
+           <form  style={{height:"400px"}}>
+        <div className="name_no" >
             <div>
                 <p className="heading" style={{marginBottom:"10px"}}>Full Name</p>
-                <input type="text" placeholder="Enter Full Name" />
+                <input type="text" placeholder="Enter Full Name" id="fullname" onChange={handledata} />
             </div>
             <div>
                 <p className="heading" style={{marginBottom:"10px"}}>Mobile Number</p>
-                <input type="Number" placeholder="Enter Mobile Number" className="Mobile" />
+                <input type="Number" placeholder="Enter Mobile Number" className="Mobile" id="mobile" onChange={handledata} />
             </div>
         </div>
        
         <div className="add">
             <p>Address</p>
-            <input type="text" className="addline"  placeholder="Address"/><br />
-            <input type="text" placeholder="Pincode"/><br />
-            <input type="text" placeholder="Country"/><br />
-            <input type="text" placeholder="City" /><br />
-            <input type="text" placeholder="State"/>
+            <input type="text" className="addline"  placeholder="Address" id="line" onChange={handledata}/><br />
+            <input type="text" placeholder="Pincode" id="pincode" onChange={handledata}/><br />
+            <input type="text" placeholder="Country"  id="country" onChange={handledata}/><br />
+            <input type="text" placeholder="City"   id="city" onChange={handledata}/><br />
+            <input type="text" placeholder="State" id="state" onChange={handledata}/>
         </div>
         <div className="butt">
-            <button  className="butt1">Save and use this Address</button>
+            <button  className="butt1" onClick={handleaddress}>Save and use this Address</button>
             <button  className="butt2">Cancel</button>
         </div>
-    
+        </form>
     </div>
     </div>)}
                <div className="addressdetails">
-
+                   <div>Address Line: {address.line}</div>
+                   <div>City: {address.city}</div>
+                   
+                   <div>State: {address.state}</div>
+                   <div>Country: {address.country}</div>
+                   <div>Pincode: {address.pincode}</div>
                </div>
-              <Link to="/payment"> <button className="pay">Proceed To Payment</button></Link>
+              <Link to="/payment"> <button className="pay" style={{marginTop:"50px"}}>Proceed To Payment</button></Link>
             </div>
         </div>
     </div>

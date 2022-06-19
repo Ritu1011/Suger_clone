@@ -7,28 +7,56 @@ import { AiOutlineHeart} from 'react-icons/ai';
  import './product.css'
 export const Makeup=()=>{
     const [makeup,setMakeup]=useState([]);
+
+    const [originaldata,setoriginaldata]=useState([]);
+    
    const getData=async()=>{
         const data=await fetch("https://sugarcosmetic.herokuapp.com/makeups")
           .then((d)=>
             d.json()
            );
            setMakeup(data.makeup);
+           setoriginaldata([...data.makeup])
           }
       useEffect(()=>{
             getData();
              
         },[]);
+
+        const SortbyPrice=(e)=>{
+         
+          if(e.target.value==="high"){
+           let high= makeup.sort((a,b)=>{
+              return +b.price-(+a.price)
+            }) 
+            setMakeup([...high])
+          }
+          else if(e.target.value==="low"){
+            let low= makeup.sort((a,b)=>{
+               return +a.price-(+b.price)
+             }) 
+             setMakeup([...low])
+           }
+           else if(e.target.value===""){
+            setMakeup([...originaldata])
+           }
+
+        }
+       
 return(
     <>
           <Navbar/>
         <Category/>
-        <div>
-          <img src="https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg" alt="" style={{height:"300px",width:"100%"}} />
-
-        </div>
-        <p style={{color:"gray",fontSize:"20px",marginLeft:"100px"}}>Total Item 16</p>
         <div className="grid" >
         < AiOutlineHeart/>
+        <div style={{margin:"30px",}}>
+            <select onChange={SortbyPrice} style={{margin:"30px",height:"30px"}} >
+               <option value="">sort by price</option>
+                <option value="high">High</option>
+                <option value="low">Low</option>
+
+            </select>
+        </div>
             <div style={{}}>
               {makeup.map((t)=>(
              <div className="Apsara">

@@ -58,6 +58,12 @@
     background-color: white;
     border-radius: 10px;
     margin-top: 10px;
+    padding-top: 5%;
+  
+}
+.addressdetails>div{
+    padding: 1%;
+    margin-top: 1%;
 }
 .pay{
     width: 80%;
@@ -126,8 +132,9 @@ p{
 .name_no{
     display: flex;
     width: 90%;
-    margin-left: 10px;
+     margin-left: 10px;
     justify-content: space-between;
+
 }
 .name_no input{
     width: 350px;

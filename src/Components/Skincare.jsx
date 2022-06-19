@@ -5,6 +5,7 @@ import { Category} from "./Category";
 import './product.css'
 export const Skincare=()=>{
     const [skincare,setSkincare]=useState([]);
+    const [originaldata,setoriginaldata]=useState([]);
   
     useEffect(()=>{
         getData();
@@ -16,13 +17,44 @@ export const Skincare=()=>{
             d.json()
            );
            setSkincare(data.skincare);
+           setoriginaldata([...data.skincare])
+}
+
+const SortbyPrice=(e)=>{
+         
+  if(e.target.value==="high"){
+   let high= skincare.sort((a,b)=>{
+      return +b.price-(+a.price)
+    }) 
+    setSkincare([...high])
+  }
+  else if(e.target.value==="low"){
+    let low= skincare.sort((a,b)=>{
+       return +a.price-(+b.price)
+     }) 
+     setSkincare([...low])
+   }
+   else if(e.target.value===""){
+    setSkincare([...originaldata])
+   }
+
 }
 return(
     <>
     <Navbar/>
     <Category/>
     <div className="grid" >
+
+    <div>
+            <select onChange={SortbyPrice} style={{margin:"30px",height:"30px"}} >
+               <option value="">sort by price</option>
+                <option value="high">High</option>
+                <option value="low">Low</option>
+
+            </select>
+        </div>
         <div>
+           
            
               {skincare.map((t)=>(
              <div className="Apsara">
