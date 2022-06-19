@@ -75,8 +75,8 @@ export const Checkout =()=>{
                 <p>Contact Information</p>
             </div>
             <div className="contact">
-               <div className="name">
-                   <p>Full Name:</p>
+               <div className="name" >
+                   <p >Full Name:</p>
                    <p>Phone Number:</p>
                </div>
                <p>Email:</p>
@@ -97,12 +97,12 @@ export const Checkout =()=>{
            </div>
         <div className="name_no">
             <div>
-                <p className="heading">Full Name</p>
-                <input type="text" placeholder="Enter Full Name"/>
+                <p className="heading" style={{marginBottom:"10px"}}>Full Name</p>
+                <input type="text" placeholder="Enter Full Name" />
             </div>
             <div>
-                <p className="heading">Mobile Number</p>
-                <input type="Number" placeholder="Enter Mobile Number" className="Mobile"/>
+                <p className="heading" style={{marginBottom:"10px"}}>Mobile Number</p>
+                <input type="Number" placeholder="Enter Mobile Number" className="Mobile" />
             </div>
         </div>
        

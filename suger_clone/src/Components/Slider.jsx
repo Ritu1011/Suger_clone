@@ -6,11 +6,11 @@ export const Slider1= ()=>{
     return(
         <Carousel infiniteLoop autoPlay style={{width:"100%"}} >
             <div className='limage'>
-                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/70252059-0efb-40b0-b659-6d27afafa0ee.jpg" alt="Phones" />
+                <img src="https://d32baadbbpueqt.cloudfront.net/fc27be93-0882-45d7-aef9-0ad461636eae.jpg" alt="Phones" />
                 
             </div>
             <div className='limage'>
-                <img src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/9bbfbc4e-f613-4265-8ea6-aac3e4893ac9.gif" alt="Phones" />
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/409f9a11-6401-4de9-ab59-1cc34592c6fd.jpg" alt="Phones" />
                 
             </div>
             <div className='limage'>
@@ -26,11 +26,10 @@ export const Slider1= ()=>{
                 
             </div>
             <div className='limage'>
-                <img src=" https://d32baadbbpueqt.cloudfront.net/Homepage/7d151892-4d17-466e-8a06-743392796264.jpg" alt="Phones" />
+                <img src=" https://d32baadbbpueqt.cloudfront.net/Homepage/9f159288-063a-4ca4-926a-7fd43c13d370.jpg" alt="Phones" />
                 
             </div>
-           
-        </Carousel>
+           </Carousel>
     )
 }
 
@@ -49,7 +48,6 @@ export const Slider2 = ()=>{
                 <img src="https://d32baadbbpueqt.cloudfront.net/e90a47e7-1d6c-4e0c-8374-f5425dddc66a.jpg" alt="Phones" />
                 
            </div>
-            
             
         </Carousel>
     )
@@ -88,8 +86,6 @@ export const Slider3 = ()=>{
                 
                 
             </div>
-            
-            
-        </Carousel>
+             </Carousel>
     )
 }

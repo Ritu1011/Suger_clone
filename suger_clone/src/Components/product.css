@@ -1,16 +1,13 @@
 .imagekasize{
-    height: 250px;
-    width: 180px;
-    
+    width: 160px;
 }
 
 .grid>div {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    
-   
-  }
+
+    }
   
   .grid>h3{
     align-items: center;
@@ -19,7 +16,7 @@
 
 
 .Apsara{
-height: 430px;
+height: 400px;
 width: 250px;
 background-color: white;
 margin-top: 15px;
@@ -30,10 +27,12 @@ margin-bottom: 15px;
 }
 .Apsara>img{
     margin-top: 15px;
-
+height: 200px;
+width: 70%;
 }
 .Apsara>button{
-    width: 100%;
+    width: 70%;
+    margin-top: 20px;
     background-color: black;
     color: white;
     font-size: 14px;

@@ -2,30 +2,29 @@ import {useEffect,useState} from "react";
 import { Footer } from "./Footer/Footer";
 import { Navbar } from "./Navbar";
 import { Category} from "./Category";
+
+import { AiOutlineHeart} from 'react-icons/ai';
  import './product.css'
 export const Makeup=()=>{
     const [makeup,setMakeup]=useState([]);
-  
-    useEffect(()=>{
-        getData();
-         return function cleanup(){
-         }
-    },[]);
-
-    const getData=async()=>{
+   const getData=async()=>{
         const data=await fetch("https://sugarcosmetic.herokuapp.com/makeups")
           .then((d)=>
             d.json()
            );
            setMakeup(data.makeup);
           }
+      useEffect(()=>{
+            getData();
+             
+        },[]);
 return(
     <>
-    
-        <Navbar/>
+          <Navbar/>
         <Category/>
         <div className="grid" >
-            <div>
+        < AiOutlineHeart/>
+            <div style={{}}>
               {makeup.map((t)=>(
              <div className="Apsara">
                  <img className="imagekasize" src={t.imgSrc} alt="" />
