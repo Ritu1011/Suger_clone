@@ -149,10 +149,6 @@ return function cleanup(){
             )}
         </div>
         <div className="right">
-            <div  className="details">
-                <img src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="amount" />
-                <p>Offers and Price Details</p>
-            </div>
             <div className="priceamount">
             <div className="details">
                 <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg" alt="details" />
